@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Sq-cp-Ec3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="gmailTesting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ua-Pf-2oY">
+                                <rect key="frame" x="164.5" y="316" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="gmailSignInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rB8-XZ-Q74"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3Ua-Pf-2oY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H86-Ez-Rhz"/>
+                            <constraint firstItem="3Ua-Pf-2oY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="252" id="wfi-Vr-O6d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7ke-Id-9Iv"/>
+                    <connections>
+                        <segue destination="NAk-Rj-HKN" kind="show" id="yxC-pm-nwL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479.19999999999999" y="132.68365817091455"/>
+        </scene>
+        <!--Gmail View Controller-->
+        <scene sceneID="lid-ge-hQv">
+            <objects>
+                <viewController storyboardIdentifier="gmailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NAk-Rj-HKN" customClass="GmailViewController" customModule="gmailTesting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="24X-Od-V0b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b4Y-Zh-hV0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="CU5-cQ-0de" customClass="GmailCell" customModule="gmailTesting" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CU5-cQ-0de" id="YnP-zX-3U1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mail title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaS-Fg-A1m">
+                                                    <rect key="frame" x="20" y="14" width="335" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="EaS-Fg-A1m" secondAttribute="bottom" id="7Ts-kh-CiS"/>
+                                                <constraint firstItem="EaS-Fg-A1m" firstAttribute="top" secondItem="YnP-zX-3U1" secondAttribute="topMargin" constant="3" id="Kzv-LT-MF5"/>
+                                                <constraint firstItem="EaS-Fg-A1m" firstAttribute="leading" secondItem="YnP-zX-3U1" secondAttribute="leadingMargin" constant="5" id="UIL-Yv-Ob8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="EaS-Fg-A1m" secondAttribute="trailing" constant="5" id="jiR-IB-SIp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mailTitle" destination="EaS-Fg-A1m" id="8Lt-gv-gzk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="880-bE-1uE" firstAttribute="bottom" secondItem="b4Y-Zh-hV0" secondAttribute="bottom" id="2ua-d2-oGI"/>
+                            <constraint firstItem="880-bE-1uE" firstAttribute="trailing" secondItem="b4Y-Zh-hV0" secondAttribute="trailing" id="e9d-IW-YHX"/>
+                            <constraint firstItem="b4Y-Zh-hV0" firstAttribute="top" secondItem="880-bE-1uE" secondAttribute="top" id="iw4-Xq-dje"/>
+                            <constraint firstItem="b4Y-Zh-hV0" firstAttribute="leading" secondItem="880-bE-1uE" secondAttribute="leading" id="vkC-4q-Xs6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="880-bE-1uE"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="b4Y-Zh-hV0" id="SyV-Qj-B0R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fQF-cz-v6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="135.38230884557723"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YUK-JG-aPE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Sq-cp-Ec3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w96-hy-Rod">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QVW-dj-ML7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jsG-aV-oQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-436" y="127"/>
+        </scene>
+    </scenes>
+</document>

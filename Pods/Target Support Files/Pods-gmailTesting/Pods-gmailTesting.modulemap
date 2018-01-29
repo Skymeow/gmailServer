@@ -1,0 +1,6 @@
+framework module Pods_gmailTesting {
+  umbrella header "Pods-gmailTesting-umbrella.h"
+
+  export *
+  module * { export * }
+}
