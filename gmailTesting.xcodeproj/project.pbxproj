@@ -17,6 +17,7 @@
 		F9153F7E201E856D00E0DF9A /* GmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9153F7D201E856D00E0DF9A /* GmailViewController.swift */; };
 		F9153F81201EC7D600E0DF9A /* TableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9153F80201EC7D600E0DF9A /* TableViewDatasource.swift */; };
 		F9153F83201ECC5600E0DF9A /* GmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9153F82201ECC5600E0DF9A /* GmailCell.swift */; };
+		F96ACB87202FA465001CA53F /* Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ACB86202FA465001CA53F /* Email.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F9153F7D201E856D00E0DF9A /* GmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailViewController.swift; sourceTree = "<group>"; };
 		F9153F80201EC7D600E0DF9A /* TableViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDatasource.swift; sourceTree = "<group>"; };
 		F9153F82201ECC5600E0DF9A /* GmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmailCell.swift; sourceTree = "<group>"; };
+		F96ACB86202FA465001CA53F /* Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Email.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,7 @@
 				F9153F73201E7BFF00E0DF9A /* Info.plist */,
 				F9153F67201E7BFF00E0DF9A /* AppDelegate.swift */,
 				F9153F6B201E7BFF00E0DF9A /* Main.storyboard */,
-				F9153F82201ECC5600E0DF9A /* GmailCell.swift */,
+				F96ACB8C202FE036001CA53F /* View */,
 				F9153F7F201EC49E00E0DF9A /* ViewController */,
 				F9153F6E201E7BFF00E0DF9A /* Assets.xcassets */,
 				F9153F70201E7BFF00E0DF9A /* LaunchScreen.storyboard */,
@@ -103,9 +105,34 @@
 			children = (
 				F9153F69201E7BFF00E0DF9A /* ViewController.swift */,
 				F9153F7D201E856D00E0DF9A /* GmailViewController.swift */,
-				F9153F80201EC7D600E0DF9A /* TableViewDatasource.swift */,
+				F96ACB8A202FE017001CA53F /* Model */,
+				F96ACB8B202FE027001CA53F /* Helper */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F96ACB8A202FE017001CA53F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F96ACB86202FA465001CA53F /* Email.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F96ACB8B202FE027001CA53F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F9153F80201EC7D600E0DF9A /* TableViewDatasource.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F96ACB8C202FE036001CA53F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9153F82201ECC5600E0DF9A /* GmailCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +278,7 @@
 			files = (
 				F9153F6A201E7BFF00E0DF9A /* ViewController.swift in Sources */,
 				F9153F7E201E856D00E0DF9A /* GmailViewController.swift in Sources */,
+				F96ACB87202FA465001CA53F /* Email.swift in Sources */,
 				F9153F81201EC7D600E0DF9A /* TableViewDatasource.swift in Sources */,
 				F9153F83201ECC5600E0DF9A /* GmailCell.swift in Sources */,
 				F9153F68201E7BFF00E0DF9A /* AppDelegate.swift in Sources */,

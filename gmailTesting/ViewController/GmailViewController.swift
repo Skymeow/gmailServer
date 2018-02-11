@@ -10,10 +10,17 @@ import UIKit
 import GoogleSignIn
 import Google
 import GoogleAPIClientForREST
+import Alamofire
 
 class GmailViewController: UIViewController {
     
-    var msgArr: [GTLRGmail_Message]?
+    var threadArr: NSArray?
+    var msgArr = [String]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     var datasource = TableViewDataSource(items: []){
         didSet {
             DispatchQueue.main.async {
@@ -26,9 +33,13 @@ class GmailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        print(msgArr![0].payload?.headers)
-        self.datasource.items = (msgArr![0].payload?.headers)!
-        self.tableView.dataSource = self.datasource
+        assignSnippet { (success) in
+            if success {
+                // MARK: assign datasource to be email snippet if call back success
+                self.datasource.items = self.msgArr
+                self.tableView.dataSource = self.datasource
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -43,7 +54,14 @@ class GmailViewController: UIViewController {
         }
     }
     
-    func getGmailSubject() {
-        
+    //    MARK: put email snippet into a list
+    func assignSnippet(completion: @escaping (Bool) -> () ) {
+        for item in threadArr!{
+            let threadDict = item as! NSDictionary
+            let snippet = threadDict["snippet"]!
+            print(snippet)
+            msgArr.append(snippet as! String)
+        }
+        completion(true)
     }
 }
